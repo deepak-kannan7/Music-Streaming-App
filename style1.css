@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Convergence&family=Ubuntu:ital,wght@0,300;0,400;1,300&family=Varela+Round&display=swap');
+body{
+    background-color: #eb75dc;
+    overflow: scroll;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    font-family: 'Ubuntu',sans-serif;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    height:65px;
+    width:100%;
+    background-color: #ed5fbe;
+    color:white;
+}
+
+nav ul li{
+    padding: 10px;
+    margin: 10px;
+}
+.Home,.About{
+    padding: 5px;
+    margin:5px;
+    color:white;
+}
+
+.Home:visited,.About:visited{
+    color:antiquewhite;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.6rem;
+}
+
+.brand img{
+    width:70px;
+    padding: 10px;
+    margin: 10px;
+}

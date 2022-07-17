@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Convergence&family=Ubuntu:ital,wght@0,300;0,400;1,300&family=Varela+Round&display=swap');
+body{
+    background-color: #eb75dc;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    font-family: 'Ubuntu',sans-serif;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    height:65px;
+    width:100%;
+    background-color: #ed5fbe;
+    color:white;
+}
+
+nav ul li{
+    padding: 10px;
+    margin: 10px;
+}
+.Home,.About{
+    padding: 5px;
+    margin:5px;
+    color:white;
+}
+
+.Home:visited,.About:visited{
+    color:antiquewhite;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.6rem;
+}
+
+.brand img{
+    width:70px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.container{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container1{
+    min-height: 30vh;
+    background-color: #f2a2e8;
+    color: white;
+    width:30%;
+    margin: 10px auto 25px 10px;
+    border-radius: 10px;
+}
+
+.container1 h1{
+    font-family: 'Ubuntu';
+    text-align: center;
+}
+
+.container1 ol{
+    font-family: 'Varela';
+    font-size: larger;
+    list-style-position: inside;
+    list-style-type: square;
+    padding: 2px;
+}
+
+.container1 a{
+    color:#ed5fbe
+}
+
+.container2{
+    min-height: 60vh;
+    background-color: #f2a2e8;
+    font-family: 'Ubuntu';
+    color: white;
+    width:33%;
+    margin: 10px auto 25px 10px;
+    border-radius: 10px;
+}
+
+.cont-2{
+    display:grid;
+    grid-gap:5px;
+}
+
+#song4{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#song5{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#song6{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.container3{
+    min-height: 60vh;
+    background-color: #f2a2e8;
+    font-family: 'Ubuntu';
+    color: white;
+    width:33%;
+    margin: 10px auto 25px 10px;
+    border-radius: 10px;
+}
+
+.container3 h1{
+    font-family: 'Ubuntu';
+    text-align: center;
+}
+
+.container ol{
+    font-family: 'Varela';
+    font-size: larger;
+    list-style-position: inside;
+    list-style-type: square;
+}
+
+h1{
+    padding: 5px;
+}
+
+.NowPlaying{
+    display:flex;
+    height:75px;
+    width:90%;
+    background-color: #ed5fbe;
+    border-radius: 10px;
+    margin: 7px;
+    padding: 3px;
+    box-sizing: content-box;
+}
+
+.th1,.th2,.th3{
+    border-radius: 10px;
+}
+
+.txt1{
+    padding: 3px;
+}
+
+.NowPlaying i{
+    padding: 5px;
+    cursor: pointer;
+}
+
+.bottom{
+    position: sticky;
+    height:110px;
+    width: 60%;
+    bottom:0;
+    margin-left:150px;
+    padding-left:100px;
+    margin-right: 50px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #f2a2e8;
+    flex-direction: column;
+    overflow-y: auto;
+    flex-wrap: wrap-reverse;
+}
+
+.songInfo{
+    padding-bottom: 15px;
+    padding-top: 5px;
+    font-family: 'Ubuntu';
+    font-weight: bold;
+}
+
+.icons i{
+    margin: 15px 20px 0 20px;
+    cursor:pointer;
+}
+
+input[type="range"]{
+    filter:hue-rotate(147deg);
+    width:50%;
+}
+
+#ProgressBar{
+    width: 30vw;
+}

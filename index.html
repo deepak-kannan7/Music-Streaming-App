@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify for CPR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type ="image/png" href="logopng.png">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="logo.jpg" alt="Logo of Spotify CPR vresion">Spotify for CPR</li>
+            <a href="index.html" class="Home">Home</a>
+            <a href="about.html" class="About">About</a>
+        </ul>
+    </nav>
+<div class="container">
+    <div class="container1">
+        <h1>What are CPR Songs?</h1>
+        <ol>
+            <li>Cardiopulmonary resuscitation (CPR) is an emergency procedure consisting of chest compressions in an effort to manually preserve intact brain function. </li>
+            <li>It is carried out until further measures are taken to restore spontaneous blood circulation and breathing in a person who is in cardiac arrest.</li>
+            <li>CPR involves chest compressions for adults at a rate of at least 100 to 120 per minute.</li>
+            <li>For untrained people, listening to songs at 100 to 120 beats per minute(called CPR songs) and following the tempo of the song while doing CPR is the way to. <a href="about.html">(...read more)</a></li>
+        </ol>
+    </div>
+    <div class="container2">
+        <div class="songlist">
+            <h1>Best Songs during CPR</h1>
+        </div>
+        <div class="cont-2">
+            <div class="NowPlaying">
+                <img src="th1.jpg" alt="Staying Alive-Bee Gees" class="th1">
+                <span class="txt1">Stayin' Alive-Bee Gees</span>
+                <span class="txt1">4:46</span>
+            </div>
+            <div class="NowPlaying">
+                <img src="th2.jpg" alt="Numb-Linkin Park" class="th2">
+                <span class="txt1">Dancing Queen-ABBA</span>
+                <span class="txt1">3:05<i id="2" class="far songItemPlay fa-solid fa-circle-play"></i></span>
+            </div>
+            <div class="NowPlaying">
+                <img src="th3.jpg" alt="Hips Dont Lie-Shakira" class="th3">
+                <span class="txt1">Hips Don't Lie-Shakira</span>
+                <span class="txt1">3:38<i id="3" class="far songItemPlay fa-solid fa-circle-play"></i></span>
+            </div>
+            <div class="NowPlaying" id="song4">
+                <img src="th4.jpg" alt="Numb-Linkin Park" class="th3">
+                <span class="txt1">Numb-Linkin Park</span>
+                <span class="txt1">3:06<i id="3" class="far songItemPlay fa-solid fa-circle-play"></i></span>
+            </div>
+            <div class="NowPlaying" id="song5">
+                <img src="th5.jpg" alt="Highway to Hell-AC/DC" class="th3">
+                <span class="txt1">Highway to Hell-AC/DC</span>
+                <span class="txt1">3:30<i id="3" class="far songItemPlay fa-solid fa-circle-play"></i></span>
+            </div>
+            <div class="NowPlaying" id="song6">
+                <img src="th6.jpg" alt="It's My Life-Bon Jovi" class="th3">
+                <span class="txt1">It's My Life-Bon Jovi</span>
+                <span class="txt1">4:27<i id="3" class="far songItemPlay fa-solid fa-circle-play"></i></span>
+            </div>
+        </div>
+    </div>
+    <div class="container3">
+        <h1>Use of knowing CPR</h1>
+        <ol>
+            <li>According to a recent study, more than 350,000 people in the U.S. suffer from cardiac arrest outside of the hospital each year.</li>
+            <li>The survival rate could actually double if a bystander administers CPR.</li>
+            <li> In a 2015 study published in the Journal of the American Medical Association, researchers found that chances for survival and minimizing brain damage are directly linked to how quickly CPR is administered after someone collapses.Simply put, knowledge about CPR could help save alot of lives.</li>
+
+        </ol>
+    </div>
+</div>
+    <div class="bottom">
+        <div class="songInfo">
+            Now Playing: 
+            <span id="masterSongName">
+                Stayin' Alive
+            </span>
+        </div>
+        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+        <div class="icons">
+            <i class="far fa-solid fa-3x fa-backward-step" id="previous"></i>
+            <i class="far fa-solid fa-3x fa-circle-play" id="masterPlay"></i>
+            <i class="far fa-solid fa-3x fa-forward-step" id="next"></i>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/35a51b3001.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
