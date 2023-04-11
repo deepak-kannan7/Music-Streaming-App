@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify for CPR</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type ="image/png" href="logopng.png">
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Convergence&family=Ubuntu:ital,wght@0,300;0,400;1,300&family=Varela+Round&display=swap');
+body{
+    background-color: #ab0374;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    font-family: 'Ubuntu',sans-serif;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    height:65px;
+    width:100%;
+    background-color: #eb75dc;
+    color:white;
+}
+
+nav ul li{
+    padding: 10px;
+    margin: 10px;
+}
+.Home,.About{
+    padding: 5px;
+    margin:5px;
+    color:white;
+}
+
+.Home:visited,.About:visited{
+    color:antiquewhite;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.6rem;
+}
+
+.brand img{
+    width:70px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.container{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container1{
+    min-height: 30vh;
+    background-color: #f522b0;
+    color: white;
+    width:30%;
+    margin: 10px auto 25px 10px;
+    border-radius: 10px;
+}
+
+.container1 h1{
+    font-family: 'Ubuntu';
+    text-align: center;
+}
+
+.container1 ol{
+    font-family: 'Varela';
+    font-size: larger;
+    list-style-position: inside;
+    list-style-type: square;
+    padding: 2px;
+}
+
+.container1 a{
+    color:#f6fa89
+}
+
+.container2{
+    min-height: 60vh;
+    background-color: #f522b0;
+    font-family: 'Ubuntu';
+    color: white;
+    width:33%;
+    margin: 10px auto 25px 10px;
+    border-radius: 10px;
+}
+
+.songlist{
+    text-align: center;
+}
+
+.cont-2{
+    display:grid;
+    grid-gap:5px;
+}
+
+#song4{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#song5{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#song6{
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.container3{
+    min-height: 60vh;
+    background-color: #f522b0;
+    font-family: 'Ubuntu';
+    color: white;
+    width:33%;
+    margin: 10px auto 25px 10px;
+    border-radius: 10px;
+}
+
+.container3 h1{
+    font-family: 'Ubuntu';
+    text-align: center;
+}
+
+.container ol{
+    font-family: 'Varela';
+    font-size: larger;
+    list-style-position: inside;
+    list-style-type: square;
+}
+
+h1{
+    padding: 5px;
+}
+
+.NowPlaying{
+    display:flex;
+    height:75px;
+    width:90%;
+    background-color: #e6e607;
+    border-radius: 10px;
+    margin: 7px;
+    padding: 3px;
+    box-sizing: content-box;
+}
+
+.th1,.th2,.th3{
+    border-radius: 10px;
+}
+
+.txt1{
+    padding: 3px;
+}
+
+.NowPlaying i{
+    padding: 5px;
+    cursor: pointer;
+}
+
+.bottom{
+    position: sticky;
+    height:110px;
+    width: 60%;
+    bottom:0;
+    margin-left:150px;
+    padding-left:100px;
+    margin-right: 50px;
+    padding-right: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #f522b0;
+    flex-direction: column;
+    overflow-y: auto;
+    flex-wrap: wrap-reverse;
+}
+
+.songInfo{
+    padding-bottom: 15px;
+    padding-top: 5px;
+    font-family: 'Ubuntu';
+    font-weight: bold;
+}
+
+.icons i{
+    margin: 15px 20px 0 20px;
+    cursor:pointer;
+}
+
+input[type="range"]{
+    filter:hue-rotate(147deg);
+    width:50%;
+}
+
+#ProgressBar{
+    width: 30vw;
+}
+
+.songItemPlay:hover{
+    scale: 1.5;
+    transition: 0.5s ease-in-out;
+}
+</style>
+<body>
+    <nav>
+        <ul>
+            <li class="brand"><img src="logo.jpg" alt="Logo of Spotify CPR vresion">Spotify for Autism</li>
+            <a href="home.html" class="Home">Home</a>
+            <a href="about.html" class="About">About</a>
+        </ul>
+    </nav>
+<div class="container">
+    <div class="container1">
+        <h1>What is Autism?</h1>
+        <ol>
+            <li>Autism, or autism spectrum disorder (ASD), refers to a broad range of conditions characterized by challenges with social skills, repetitive behaviors, speech and nonverbal communication. </li>
+            <li>1 in 44 children have autism in the US whereas 1 in 500 children are reported to have autism in India</li>
+            <li>It is a serious developmental disorder that impairs the ability to communicate.</li>
+            <li>Music therapy can help children develop or improve skills like shared attention, communication and playing <a href="about.html">(...read more)</a></li>
+        </ol>
+    </div>
+    <div class="container2">
+        <div class="songlist">
+            <h1>Songs for Autism Therapy</h1>
+        </div>
+        <div class="cont-2">
+            <div class="NowPlaying">
+                <img src="th1.jpg" alt="Staying Alive-Bee Gees" class="th1">
+                <span class="txt1">Stayin' Alive-Bee Gees</span>
+                <span class="txt1">4:46</span>
+            </div>
+            <div class="NowPlaying">
+                <img src="th2.jpg" alt="Numb-Linkin Park" class="th2">
+                <span class="txt1">Dancing Queen-ABBA</span>
+                <span class="txt1">3:05<i id="2" class="far songItemPlay fa-solid fa-circle-play"></i></span>
+            </div>
+            <div class="NowPlaying">
+                <img src="th3.jpg" alt="Hips Dont Lie-Shakira" class="th3">
+                <span class="txt1">Hips Don't Lie-Shakira</span>
+                <span class="txt1">3:38<i id="3" class="far songItemPlay fa-solid fa-circle-play"></i></span>
+            </div>
+            <div class="NowPlaying" id="song4">
+                <img src="th4.jpg" alt="Numb-Linkin Park" class="th3">
+                <span class="txt1">Numb-Linkin Park</span>
+                <span class="txt1">3:06<i id="4" class="far songItemPlay fa-solid fa-circle-play"></i></span>
+            </div>
+            <div class="NowPlaying" id="song5">
+                <img src="th5.jpg" alt="Highway to Hell-AC/DC" class="th3">
+                <span class="txt1">Highway to Hell-AC/DC</span>
+                <span class="txt1">3:30<i id="5" class="far songItemPlay fa-solid fa-circle-play"></i></span>
+            </div>
+            <div class="NowPlaying" id="song6">
+                <img src="th6.jpg" alt="It's My Life-Bon Jovi" class="th3">
+                <span class="txt1">It's My Life-Bon Jovi</span>
+                <span class="txt1">4:27<i id="6" class="far songItemPlay fa-solid fa-circle-play"></i></span>
+            </div>
+        </div>
+    </div>
+    <div class="container3">
+        <h1>Use of Music Therapy</h1>
+        <ol>
+            <li>Music Therapy for autism uses music to address physical, emotional, cognitive, social needs of children with autism. This can be done mostly by simulating the senses</li>
+            <li>Music therapy increases the ability to associate sounds with communication of needs as it helps in connecting the auditory and motor functions of the brain.</li>
+            <li> Similar to other forms of therapy, affiliations with music therapists to come and help a child with her/his therapy is encouraged. Apart from being a therapy in itself, Music therapy can go hand in hand with other therapies your child may be receiving.</li>
+
+        </ol>
+    </div>
+</div>
+    <div class="bottom">
+        <div class="songInfo">
+            Now Playing: 
+            <span id="masterSongName">
+                Stayin' Alive
+            </span>
+        </div>
+        <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
+        <div class="icons">
+            <i class="far fa-solid fa-3x fa-backward-step" id="previous"></i>
+            <i class="far fa-solid fa-3x fa-circle-play" id="masterPlay"></i>
+            <i class="far fa-solid fa-3x fa-forward-step" id="next"></i>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/35a51b3001.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

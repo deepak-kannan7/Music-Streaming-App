@@ -1,5 +1,4 @@
 console.log("Welcome to Spotify for CPR")
-//Initializing variables
 let songIndex=1;
 let audioElement= new Audio('songs/1.mp3');
 let masterPlay=document.getElementById('masterPlay');
@@ -8,14 +7,12 @@ let myProgressBar=document.getElementById('myProgressBar');
 let songs=[
     {songName: "Stayin' Alive", filePath: "Spotify Clone/1.mp3", coverPath: "Spotify Clone/th1.jpg"},
     {songName: "Dancing Queen", filePath: "Spotify Clone/2.mp3", coverPath: "Spotify Clone/th2.jpg"},
-    {songName: "Hips Dont Lie", filePath: "Spotify Clone/.mp3", coverPath: "Spotify Clone/th3.jpg"},
+    {songName: "Hips Dont Lie", filePath: "Spotify Clone/3.mp3", coverPath: "Spotify Clone/th3.jpg"},
     {songName: "Numb", filePath: "Spotify Clone/4.mp3", coverPath: "Spotify Clone/th4.jpg"},
     {songName: "Highway to Hell", filePath: "Spotify Clone/5.mp3", coverPath: "Spotify Clone/th5.jpg"},
     {songName: "It's My Life", filePath: "Spotify Clone/6.mp3", coverPath: "Spotify Clone/th6.jpg"}
 ]
 
-//audioElement.play()
-//Handle play/pause click
 masterPlay.addEventListener('click',()=>{
     if(audioElement.paused || audioElement.currentTime<=0){
         audioElement.play();
@@ -28,7 +25,6 @@ masterPlay.addEventListener('click',()=>{
         masterPlay.classList.add('fa-circle-play');
     }
 })
-//Listen to events
 audioElement.addEventListener('timeupdate',()=>{
     progress=parseInt((audioElement.currentTime/audioElement.duration)*100);
     myProgressBar.value=progress;
@@ -52,7 +48,7 @@ Array.from(document.getElementsByClassName('songItemPlay')).forEach((element)=>{
         e.target.classList.remove('fa-play-circle');
         e.target.classList.add('fa-pause-circle');
         audioElement.src=`songs/${songIndex}.mp3`;
-        masterSongName.innerText=songs[songIndex].songName;
+        masterSongName.innerText=songs[songIndex-1].songName;
         audioElement.currentTime=0;
         audioElement.play();
         masterPlay.classList.remove('fa-circle-play');

@@ -19,7 +19,7 @@ nav ul{
     align-items: center;
     height:65px;
     width:100%;
-    background-color: #ed5fbe;
+    background-color: #ab0374;
     color:white;
 }
 
@@ -91,6 +91,10 @@ nav ul li{
     width:33%;
     margin: 10px auto 25px 10px;
     border-radius: 10px;
+}
+
+.songlist{
+    text-align: center;
 }
 
 .cont-2{
@@ -207,4 +211,9 @@ input[type="range"]{
 
 #ProgressBar{
     width: 30vw;
+}
+
+.songItemPlay:hover{
+    scale: 1.5;
+    transition: 0.5s ease-in-out;
 }
