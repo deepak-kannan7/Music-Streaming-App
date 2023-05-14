@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="Login" content="Login Page">
+	<title>Login</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap" rel="stylesheet">
+	<script type="text/javascript">
+		function validate(){
+            var inps=document.getElementsByClassName("logininp");
+            var passele=document.getElementById("password");
+            var re=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+~`|}{[\]\\:;'<>,.?\/])(?!.*\s).{8,}$/;
+            var cond=true;
+            for(let i=0;i<inps.length;i++){
+                if(inps[i].value==""){
+                    cond=false;
+                }
+            }
+            console.log(cond);
+            if((!re.test(passele.value))&& (cond=true)){
+                alert('Password should be atleast 8 characters.\nMust have an lowercase, uppercase and a special character.');
+            }
+			else if(cond==true){
+                angular.element(document.getElementById("body")).scope().pass();
+            }
+		}
+	</script>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Convergence&family=Ubuntu:ital,wght@0,300;0,400;1,300&family=Varela+Round&display=swap');
+
+    * {
+        padding: 0;
+        margin: 0;
+    }
+
+    body {
+        background-color: #ed5fbe;
+        overflow: hidden;
+    }
+
+    nav {
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    nav ul {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        height: 65px;
+        width: 100%;
+        background-color: #ab0374;
+        color: white;
+    }
+
+    nav ul li {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        font-weight: bolder;
+        font-size: 1.6rem;
+    }
+
+    .brand img {
+        width: 70px;
+        padding: 10px;
+        margin: 10px;
+    }
+
+.loginbox{
+    display: block;
+    background: #ab0374;
+    background-clip: padding-box;
+    margin: 5% 30%;
+    padding: 1% 1%;
+    height: auto;
+    border: solid ;
+    border-color: #f8f5fe;
+}
+
+.loginbox h1{
+    text-align: center;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder;
+    padding: 15px;
+}
+
+.loginbox table{
+    margin-top: auto;
+    width: 80%;
+    margin-bottom: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    background-color: #ed5fbe;
+    
+}
+
+.loginbox table td{
+    padding: 6% 6%;
+}
+
+.loginbox label{
+    color: white; 
+    font-size: larger;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder;
+}
+
+.loginbox input{
+    width: 80%;
+    padding: 12px 5px;
+    
+}
+
+.loginbox input[type="submit"]{
+    width: 25%;
+    margin: 5% 40%;
+    background-color: yellowgreen;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bolder;
+    font-size:larger;
+}
+
+.loginbox input:hover[type="submit"]{
+    background-color: red;
+}
+</style>
+<body id="body" ng-app="login" ng-controller="loginCtrl">
+    <nav>
+        <ul>
+            <li class="brand"><img src="logopng.png" alt="Logo of Spotify CPR vresion">Spotify for Music Therapy</li>
+            <a href="home.html" style="color:white">Home</a>
+        </ul>
+    </nav>
+	<div class="loginbox">
+		<h1>Login Portal</h1>
+		<form method="post">
+			<table>
+			<tr>
+				<td>
+					<label for="email" >Email:</label>
+				</td>
+				<td>
+					<input class="logininp" type="email" id="email" ng-model="user.email" required />
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<label for="password" >Password:</label>
+				</td>
+				<td>
+					<input class="logininp" type="password" id="password" ng-model="user.password" required/>
+				</td>
+			</tr>	
+			</table>
+			<div class="login">
+				<input type="submit" id="login" value="Login" onclick="validate()"/>
+			</div>
+		</form>
+	</div>
+	{{user}}
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+<script>
+    var app=angular.module("login",["ngRoute"]);
+    app.controller("loginCtrl",function($scope,$window){
+        $scope.user={email:"",password:""};
+        $scope.msg="no";
+        $scope.pass=function(){
+            console.log($scope.user);
+            $window.location.replace("/home1.html")
+        }
+    });
+</script>
+</html>
